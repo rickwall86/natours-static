@@ -1,0 +1,23 @@
+{
+  "name": "nature-tours-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickwall86/nature-tours-static.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rickwall86/nature-tours-static/issues"
+  },
+  "homepage": "https://github.com/rickwall86/nature-tours-static#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
