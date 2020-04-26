@@ -24,7 +24,8 @@ $color-grey-extra-dark: #333;
 $color-white: #fff;
 $color-black: #000;
 
-$color-shadow-light: rgba(#000, .3);
+$color-shadow-x-light: rgba(rgb(0, 0, 0), .1);
+$color-shadow-light: rgba(rgb(0, 0, 0), .3);
 $color-shadow-medium: rgba(#000, .5);
 $color-shadow-strong: rgba(#000, .7);
 
