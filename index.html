@@ -73,7 +73,7 @@
 
     <main>
       <section class="section-about">
-        <div class="center-text">
+        <div class="center-text wrapper">
           <h2 class="heading-secondary margin-bottom-8">
             Exciting tours for adventurous people
           </h2>
@@ -99,21 +99,27 @@
             <a href="" class="btn-text">Learn more &rarr;</a>
           </div>
           <div class="col-1-of-2">
-            <div class="composition">
+            <div class="composition wrapper">
               <img
-                src="img/nat-1-large.jpg"
-                alt="photo1"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large 1000w"
+                sizes="(max-width: 900px) 28vw, (max-width: 600px) 37vw, 300px"
+                alt="nature photo 1"
                 class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
               />
               <img
-                src="img/nat-2-large.jpg"
-                alt="photo2"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 900px) 31vw, (max-width: 600px) 35vw, 300px"
+                alt="nature photo 2"
                 class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
               />
               <img
-                src="img/nat-3-large.jpg"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 900px) 26vw, (max-width: 600px) 31vw, 300px"
                 alt="photo3"
                 class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -177,7 +183,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="center-text">
           <h2 class="heading-secondary margin-bottom-8">
             Popular tours
@@ -210,7 +216,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">£297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -241,7 +247,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">£497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -272,7 +278,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">£697</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -292,7 +298,7 @@
             Your browser is not supported
           </video>
         </div>
-        <div class="center-text margin-bottom-8">
+        <div class="center-text margin-bottom-8 wrapper">
           <h2 class="heading-secondary">
             We create incredible memories
           </h2>
@@ -301,9 +307,11 @@
           <div class="story margin-bottom-12">
             <figure class="story__shape">
               <img
-                src="img/nat-8.jpg"
+                srcset="img/nat-8.jpg 300w, img/nat-8-medium.jpg 500w"
+                sizes="(max-width: 900px) 26vw, (max-width: 600px) 39vw, 300px"
                 class="story__img"
                 alt="person in a kayak"
+                src="img/nat-8-medium.jpg"
               />
               <figcaption class="story__caption">Carley Steel</figcaption>
             </figure>
@@ -327,9 +335,11 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="img/nat-9.jpg"
+                srcset="img/nat-9.jpg 300w, img/nat-9-medium.jpg 500w"
+                sizes="(max-width: 900px) 26vw, (max-width: 600px) 39vw, 300px"
                 class="story__img"
                 alt="person on a mountain tour"
+                src="img/nat-9-medium.jpg"
               />
               <figcaption class="story__caption">Ricky Wallace</figcaption>
             </figure>
@@ -421,7 +431,23 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="full logo" class="footer__logo" />
+        <picture>
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+            alt="small company logo"
+            class="footer__logo"
+            src="img/logo-green-small-2x.png"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="company logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -462,8 +488,47 @@
       </div>
     </footer>
 
-    <div class="popup">
-      <div class="popup__content">POPUP</div>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img
+            srcset="img/nat-8-medium.jpg 300w, img/nat-8-large.jpg 1000w"
+            sizes="(max-width: 900px) 37vw, (max-width: 600px) 37vw, 337px"
+            alt="Tour photo"
+            class="popup__img"
+            src="img/nat-8-large.jpg"
+          />
+          <img
+            srcset="img/nat-9-medium.jpg 300w, img/nat-9-large.jpg 1000w"
+            sizes="(max-width: 900px) 37vw, (max-width: 600px) 37vw, 337px"
+            alt="Tour photo"
+            class="popup__img"
+            src="img/nat-9-large.jpg"
+          />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary">
+            Start booking now
+          </h2>
+          <h3 class="heading-tertiary margin-top-2">
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et veniam
+            soluta quas? Velit, provident iste blanditiis vel nulla saepe
+            corporis necessitatibus incidunt nisi quisquam commodi obcaecati
+            tenetur tempore voluptatibus aliquam vitae labore, illum non ducimus
+            libero similique suscipit eos. Eaque dolore, eveniet tempora
+            accusamus amet maxime veniam aliquid quasi libero. Sed obcaecati
+            accusamus, voluptas magni nesciunt praesentium, aspernatur soluta
+            recusandae, voluptatibus impedit suscipit vel perspiciatis enim
+            accusantium? Perferendis suscipit repellat quasi molestiae a dolores
+            ipsa impedit modi.
+          </p>
+          <button class="btn btn--green">Book now</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

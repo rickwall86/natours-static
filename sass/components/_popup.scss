@@ -1,12 +1,108 @@
 .popup {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.808);
-    z-index: 500;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s;
 
     &__content {
-        width: 80%;
+        @include absCenter;
+        width: 75%;
         background-color: white;
+        box-shadow: 0 2rem 4rem $color-shadow-light;
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all .5s .2s;
+
+        // @include respond(tab-land) {
+        //     display: block;
+        // }
+    }
+
+    &__left {
+        width: 33.33333333%;
+        display: table-cell;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__right {
+        width: 66.66666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+
+        @include respond(tab-land) {
+            width: 50%;
+            float: left;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        padding: 2rem 0;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid rgba(128, 128, 128, 0.24);
+        hyphens: auto;
+
+        @include respond(tab-land) {
+            font-size: 1.4rem;
+        }
+
+        @include respond(phone) {
+            column-count: 1;
+        }
+    }
+    
+    // OPEN STATES
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            display: inline-block;
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            text-decoration: none;
+            color: $color-grey-dark;
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 }
