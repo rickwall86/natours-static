@@ -57,16 +57,32 @@
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
 
+        @include respond(tab-port) {
+            height: 30rem;
+        }
+
         &--1 {
-            background-image: $color-secondary-gradient, url(../img/nat-5.jpg);
+            background-image: $color-secondary-gradient, url("../img/nat-5-900px.jpg");
+
+            @media (max-width: 37.5em) {
+                background-image: $color-secondary-gradient, url("../img/nat-5-600px.jpg");
+            }
         }
 
         &--2 {
-            background-image: $color-primary-gradient, url(../img/nat-6.jpg);
+            background-image: $color-primary-gradient, url("../img/nat-6-900px.jpg");
+
+            @media (max-width: 37.5em) {
+                background-image: $color-primary-gradient, url("../img/nat-6-600px.jpg");
+            }
         }
 
         &--3 {
-            background-image: $color-tertiary-gradient, url(../img/nat-7.jpg);
+            background-image: $color-tertiary-gradient, url("../img/nat-7-900px.jpg");
+
+            @media (max-width: 37.5em) {
+                background-image: $color-tertiary-gradient, url("../img/nat-7-600px.jpg");
+            }
         }
     }
 
