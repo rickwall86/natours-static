@@ -20,10 +20,16 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        // circle(radius at x y)
-        shape-outside: circle(50% at 50% 50%); // Needs to had a width and height, and needs to be floated to work
-        clip-path: circle(50% at 50% 50%);
+        overflow: hidden;
+        border-radius: 50%;
         transform: translateX(-3rem) skewX(12deg);
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%); // Needs to have a width and height, and needs to be floated to work
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translateX(0) skewX(0);

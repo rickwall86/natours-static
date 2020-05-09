@@ -15,12 +15,14 @@ body {
     &--main {
         display: block;
         letter-spacing: 3.6rem;
+        margin-right: -3.6rem;
         font-weight: 400;
         font-size: 5.5rem;
         animation: moveInLeft 1s ease-out;
 
         @include respond (phone) {
             letter-spacing: 1rem;
+            margin-right: -1rem;
             font-size: 4.5rem;
         }
     }
@@ -29,11 +31,13 @@ body {
         display: block;
         font-weight: 700;
         letter-spacing: 1.3rem;
+        margin-right: -1.3rem;
         font-size: 2.2rem;
         animation: moveInRight 1s ease-out;
 
         @include respond(phone) {
             letter-spacing: .5rem;
+            margin-right: -.5rem;
             font-size: 1.8rem;
         }
     }

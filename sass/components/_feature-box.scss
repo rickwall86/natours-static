@@ -18,9 +18,14 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        transition: all .3s ease-in-out;
     }
 
     &:hover {
         transform: translateY(-1rem) scale(1.05);
+    }
+
+    &:hover &__icon {
+        transform: rotate(360deg) scale(1.5);
     }
 }

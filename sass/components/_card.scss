@@ -13,6 +13,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         box-shadow: 0 2rem 4rem $color-shadow-light;
         border-radius: 3px;
@@ -161,13 +162,9 @@
     }
 
 
-
-
-
-
-
-    
-    @include respond(tab-port) {
+    // Smaller screen displays
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover: none) {
 
         height: auto;
         border-radius: 3px;
